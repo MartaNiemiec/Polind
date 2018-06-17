@@ -1,0 +1,18 @@
+.sign-up { 
+    background-image: url(../img/sign-up-photo.jpg);
+    grid-column: full-start / full-end;
+    height: 40vh;
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__paragraph {
+        padding-top: 3rem;
+    }
+ }

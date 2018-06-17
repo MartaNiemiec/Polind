@@ -1,0 +1,48 @@
+.footer { 
+    grid-column: full-start / full-end;
+    // max-height: 35rem;
+    position: relative;
+
+    &__background {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--text {
+            text-transform: uppercase;
+            font-size: 27rem;
+            font-weight: bolder;
+
+            color: rgba($color-white,.7);
+            text-shadow: 0  1rem 3rem rgba(83, 83, 83, 0.1);
+            
+            z-index: 0;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__logo {
+        z-index: 1;
+        transform: scale(0.8,0.8);
+    }
+    
+    &__copyright {
+        z-index: 1;
+        color: $color-grey-dark-1;
+        padding-top: 2rem;
+        font-weight: 700;
+    }
+ }

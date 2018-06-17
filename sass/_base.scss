@@ -1,0 +1,69 @@
+
+
+// COLOR VARIABLES
+
+$color-grey-light-1:#f8f9fb;
+$color-grey-light-2: #bdc8d9;
+$color-grey-dark-1: #606f81;
+$color-white: #fff;
+$color-black: #000;
+
+$color-red: #ed6950;
+$color-yellow: #ffc74a;
+$color-yellow-dark: #b98000;
+
+
+// FONT VARIABLES
+$font-primary: 'Montserrat', sans-serif;
+
+// RESPONSIVE BREAKOPINTS
+$bp-largest: 75em;      // 1200px/16px = 75em
+$bp-large: 62.5em;      // 1000px
+// $bp-medium: 50em;       // 800px
+// $bp-small: 37.5em;       // 600px
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: $font-primary;
+    font-size: 62.5%;    //10px/16px = 62.5% -> 1rem = 10px
+    color: $color-white;
+    font-weight: 400;
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 55%;
+    }
+}
+
+.container {
+    display: grid;
+
+    grid-template-rows: 70vh 25vh min-content fit min-content minmax(min-content, 35rem);
+
+    grid-template-rows: 70vh 25vh repeat(3, min-content) minmax(min-content, 35rem);
+    grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(5rem, 1fr) [full-end];
+}
+
+::selection {
+    background-color: $color-yellow;
+    color: $color-white;
+}
+
+
+
+
+
+
+
+
+
+
+
+

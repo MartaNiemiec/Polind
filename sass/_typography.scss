@@ -1,0 +1,170 @@
+/*
+-----------------------------------------------------
+FONTS SIZES
+-----------------------------------------------------
+*/
+
+h1 {
+    
+    font-size: 9.2rem;
+    line-height: 1;
+}
+
+h2 {
+    
+    font-size: 3.6rem;
+    line-height: 1;
+    
+}
+
+h3 {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+h4 {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+h5 {
+    font-size: 1.5rem;
+    line-height: 1;
+    // font-size: 1.9rem;  
+}
+
+p {
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+/*
+-----------------------------------------------------
+COLORS
+-----------------------------------------------------
+*/
+.text-red { color: $color-red; }
+
+.text-yellow { color: $color-yellow; }
+
+.text-grey { color: $color-grey-dark-1; }
+
+.text-opacity20 { color: rgba(255, 255, 255, 0.3) !important; }
+.text-bold { font-weight: 700;}
+
+/*
+-----------------------------------------------------
+ BUTTON
+-----------------------------------------------------
+*/
+.btn {
+    &--yellow {
+        &,
+        &:link,
+        &:visited {
+            background-color: $color-yellow;
+            color: $color-yellow-dark;
+        }
+    }
+
+    &--white {
+        &,
+        &:link,
+        &:visited {
+            background-color: $color-white;
+            box-shadow: .1rem .1rem .5rem rgba(0,0,0,0.1);
+            color: $color-grey-light-2;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: $color-yellow;
+            color: $color-yellow-dark;
+        }
+
+    }
+
+    &,
+    &:link,
+    &:visited {
+        
+        border: none;
+        justify-self: center;
+        border-radius: 2rem;
+        padding: .9rem 2rem;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        margin-top: 3rem; 
+        cursor: pointer;
+        transition: all .3s;
+        display: inline-block;
+        position: relative;
+        font-weight: 700;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+
+        &::after {
+            /*after pseudo element when we have a button on the hover state*/
+            transform: scaleX(1.4) scaleY(1.6);
+            /* eg. 2=double the size*/
+            opacity: 0;
+            /*for fade out*/
+        }
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(-1px);
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 2rem;
+        top: 0;
+        left: 0;
+        transition: all .4s;
+        z-index: 10;
+        background-color: $color-yellow;
+        z-index: -1;
+    }
+
+
+
+}
+
+/*
+-----------------------------------------------------
+MARGINS
+-----------------------------------------------------
+*/
+.margin-top-bottom { margin-top: 2rem; margin-bottom: 2rem; }
+.margin-top { margin-top: 2rem; }
+
+
+/*
+-----------------------------------------------------
+LINKS
+-----------------------------------------------------
+*/
+
+.link {
+    &,
+    &:link,
+    &:visited { 
+        color: $color-yellow;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $color-yellow-dark;
+    }
+}
