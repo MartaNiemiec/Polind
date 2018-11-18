@@ -56,8 +56,6 @@ html {
 .container {
     display: grid;
 
-    // grid-template-rows: 70vh 25vh min-content fit min-content minmax(min-content, 35rem);
-
     grid-template-rows: 75vh 25rem repeat(3, min-content) minmax(min-content, 35rem);
     grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(5rem, 1fr) [full-end];
 
@@ -75,10 +73,7 @@ html {
     
     @media only screen and (max-width: $bp-xsmall) {
         grid-template-columns: [full-start] minmax(1rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(1rem, 1fr) [full-end];
-    }
-
-    @media only screen and (max-width: $bp-xsmall) {
-        grid-template-rows: 90vh min-content repeat(3, min-content) 15rem;
+        grid-template-rows: 100vh min-content repeat(3, min-content) 15rem;
     }
 }
 

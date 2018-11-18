@@ -9,12 +9,14 @@
     @media only screen and (max-width: $bp-medium) {
         flex-wrap: wrap;
         transform: translateY(-25%);
-        // grid-column: full-start / full-end;
         justify-content: space-around;
     }
     @media only screen and (max-width: $bp-small) {
         transform: translateY(-10%);
-        // grid-column: center-start / center-end;
+    }
+
+    @media only screen and (max-width: $bp-xsmall) {
+        transform: translateY(0);
     }
 }
 
@@ -35,7 +37,8 @@
     }
     
     @media only screen and (max-width: $bp-xsmall) {
-        width: 100%;height: 20rem;
+        width: 100%;
+        height: 20rem;
     }
 
     &__content {
@@ -72,11 +75,8 @@
                 @media only screen and (max-width: $bp-large) {
                     transform: scale(1,1);
                 }
-                
             }
-
         }
-        
     }
 
     &__1 { 

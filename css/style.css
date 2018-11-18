@@ -87,10 +87,8 @@ html {
       grid-template-rows: 90vh min-content repeat(3, min-content) 19rem; } }
   @media only screen and (max-width: 25em) {
     .container {
-      grid-template-columns: [full-start] minmax(1rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(1rem, 1fr) [full-end]; } }
-  @media only screen and (max-width: 25em) {
-    .container {
-      grid-template-rows: 90vh min-content repeat(3, min-content) 15rem; } }
+      grid-template-columns: [full-start] minmax(1rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(1rem, 1fr) [full-end];
+      grid-template-rows: 100vh min-content repeat(3, min-content) 15rem; } }
 
 ::selection {
   background-color: #ffc74a;
@@ -109,6 +107,9 @@ html {
   @media only screen and (max-width: 37.5em) {
     .categories {
       transform: translateY(-10%); } }
+  @media only screen and (max-width: 25em) {
+    .categories {
+      transform: translateY(0); } }
 
 .card {
   width: 19%;
@@ -397,7 +398,16 @@ html {
     display: none; }
     @media only screen and (max-width: 50em) {
       .menu__button {
-        display: block; } }
+        display: block;
+        right: 3rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .menu__button {
+        right: 2.5rem;
+        top: 2.5rem; } }
+    @media only screen and (max-width: 25em) {
+      .menu__button {
+        right: 1.5rem;
+        top: 1.5rem; } }
   .menu__icon {
     position: absolute;
     top: 2.9rem;

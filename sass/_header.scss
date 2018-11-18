@@ -19,7 +19,6 @@
         padding: 2rem 2rem 18vh 2rem;
         justify-content: center;
     }
-    
 }
 
 
@@ -30,14 +29,7 @@
 .nav {
     display: grid;
     grid-template-columns: auto auto;
-    // display: flex;
-    // flex-wrap: wrap;
     justify-content: space-between;
-
-    @media only screen and (max-width: $bp-medium) {
-        // grid-template-columns: auto auto;
-    }
-
 }
 
 .logo {
@@ -47,7 +39,6 @@
     &__img {
         margin-right: 2.5rem;
         flex: 1;
-
     }
 
     &__text {
@@ -57,7 +48,6 @@
             font-size: 2rem;
         }
     }
-
 }
 
 @media only screen and (max-width: $bp-medium) {
@@ -67,20 +57,17 @@
     }
     
     [aria-expanded="true"] > .menu__icon {
-       
-            background-color: transparent;
+        background-color: transparent;
     }
 
     [aria-expanded="true"] > .menu__icon::before {
         transform: rotate(-135deg);
             top: 0;
-        // transform-origin: 50% 50%;
     }
     
     [aria-expanded="true"] > .menu__icon::after {
         transform: rotate(135deg);
             top: 0;
-        // transform-origin: 50% 50%;
     }
 }
 
@@ -119,8 +106,19 @@
 
         @media only screen and (max-width: $bp-medium) {
             display: block;
-
+            right: 3rem;
         }
+        
+        @media only screen and (max-width: $bp-small) {
+            right: 2.5rem;
+            top: 2.5rem;
+        }
+        
+        @media only screen and (max-width: $bp-xsmall) {
+            right: 1.5rem;
+            top: 1.5rem;
+        }
+
     }
 
     &__icon {
@@ -145,9 +143,6 @@
             left: 0;
         }
 
-
-        
-        
         &::before { top: -.8rem; }    
         &::after { top: .8rem; }
     }
@@ -191,7 +186,6 @@
         
         &:focus {
             color: rgba($color-yellow, .8);
-            
         }
 
         &:active,
@@ -208,12 +202,8 @@
             background-color: rgba($color-yellow, .7);
             transform: scale(1);
         }
-        
     }
-
 }
-
-
 
 .search {
     
@@ -224,7 +214,6 @@
     &__checkbox {
         display: none;
     }
-
 
 
 // FUNCTIONALITY
@@ -275,8 +264,6 @@
             height: 3rem;
         }
 
-        // transform: translateY(5px);
-
         &:hover,
         &:active,
         &:focus {
@@ -290,6 +277,4 @@
         transition: all .5s;
         position: absolute;
     }
-
-    
 }
