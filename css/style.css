@@ -309,6 +309,7 @@ html {
   padding: 3rem 3rem 18vh 3rem;
   text-align: center;
   display: grid;
+  grid-template-columns: 1fr;
   grid-template-rows: min-content 1fr repeat(3, min-content) 1fr;
   align-items: end;
   position: relative; }
@@ -337,12 +338,67 @@ html {
       .logo__text {
         font-size: 2rem; } }
 
+@media only screen and (max-width: 50em) {
+  [aria-expanded="true"] ~ ul {
+    z-index: 1900;
+    transform: translateY(0); } }
+
 .menu {
   display: flex;
   align-items: center; }
+  @media only screen and (max-width: 50em) {
+    .menu {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #f8f9fb;
+      transform: translateY(-110%);
+      transition: all .5s; } }
+  .menu__button {
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    border: none;
+    outline: none;
+    right: 4rem;
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: none; }
+    @media only screen and (max-width: 50em) {
+      .menu__button {
+        display: block; } }
+  .menu__icon {
+    position: absolute;
+    top: 2.9rem;
+    right: 1.6rem; }
+    .menu__icon, .menu__icon::before, .menu__icon::after {
+      width: 3rem;
+      height: 2px;
+      background-color: #606f81;
+      display: inline-block;
+      transition: all .2s; }
+    .menu__icon::before, .menu__icon::after {
+      content: "";
+      position: absolute;
+      left: 0; }
+    .menu__icon::before {
+      top: -.8rem; }
+    .menu__icon::after {
+      top: .8rem; }
   .menu__item {
     list-style: none;
     padding-top: 5px; }
+    @media only screen and (max-width: 50em) {
+      .menu__item {
+        padding: 1.5rem; } }
   .menu__link:link, .menu__link:visited {
     text-decoration: none;
     color: #fff;
@@ -350,6 +406,10 @@ html {
     padding: .2rem 2rem;
     position: relative;
     transition: all .3s ease; }
+    @media only screen and (max-width: 50em) {
+      .menu__link:link, .menu__link:visited {
+        color: #000 !important;
+        font-size: 3.5vh; } }
     .menu__link:link::after, .menu__link:visited::after {
       content: "";
       width: 90%;
