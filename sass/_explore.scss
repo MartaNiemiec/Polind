@@ -9,9 +9,17 @@
     display: grid;
     grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(2, [col-start] minmax(min-content, 56rem) [col-end]) [center-end] minmax(5rem, 1fr) [full-end];
 
-    // @media only screen and (max-width: $bp-largest) {
-    //     grid-template-columns: [full-start] 5rem [center-start] 1fr max-content [center-end] 5rem [full-end];
-    // }
+    @media only screen and (max-width: $bp-largest) {
+        grid-template-columns: [full-start] 5rem [center-start] 1fr max-content [center-end] 5rem [full-end];
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: [full-start] 3rem [center-start] 1fr max-content [center-end] 3rem [full-end];
+    }
+    
+    @media only screen and (max-width: $bp-xsmall) {
+        grid-template-columns: [full-start] 2rem [center-start] 1fr max-content [center-end] 2rem [full-end];
+    }
 
     &__background {
         height: 100%;
@@ -33,6 +41,21 @@
             
             margin: -3rem 0;
             z-index: 0;
+
+            @media only screen and (max-width: $bp-medium) {
+                font-size: 22rem;
+                margin: -2rem 0;
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                font-size: 20rem;
+                // margin: -2rem 0;
+            }
+
+            @media only screen and (max-width: $bp-xsmall) {
+                font-size: 15rem;
+                // margin: -2rem 0;
+            }
         }
     }
     
@@ -50,6 +73,10 @@
         z-index: 100;
         display: grid;
         grid-template-columns: 50% 50%;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-columns: 100%;
+        }
     }
 
     
@@ -66,36 +93,67 @@
             padding: 1rem 0;
             line-height: 2.5rem;
         }
+
+        @media only screen and (max-width: $bp-medium) {
+            // position: absolute;
+            // width: 90%;
+            // z-index: 5;
+            // background-color: rgba(255,255,255,0.8)
+        }
     }
 
     &__photo {
         width: 90%;
         height: 90%;
         transition: all .1s;
+        box-shadow: 10px 10px  $color-yellow;
+        top: 5rem;
 
+        @media only screen and (max-width: $bp-large) {
+            width: 95%;
+            height: 95%;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            // opacity: .6;
+            display: none;
+        }
     }
 
     &__img {
         width: 100%;
-        height: 100%;
+        height: auto;
         justify-self: start;
         align-self: start;
         position: relative;
-        // outline: 1rem solid $color-yellow;
-        // outline-offset: 2rem ;
         transition: all .1s;
+
+
+        // @media only screen and (max-width: $bp-large) {
+        //     width: 90%;
+        //     // height: 90%;
+        // }
+        
+        // @media only screen and (max-width: $bp-medium) {
+        //     width: 80%;
+        //     // height: 80%;
+        // }
+
       
-        &::before {
-            content: "";
-            display: inline-block;
-            width: 90%;
-            height: 90%;
-            position: absolute;
-            top: 3rem;
-            left: 3rem;
-            z-index: -1;
-            border: 1rem solid $color-yellow;
-        }
+        // &::before {
+        //     content: "";
+        //     display: inline-block;
+        //     width: 90%;
+        //     height: 100%;
+        //     position: absolute;
+        //     top: 3rem;
+        //     left: 3rem;
+        //     z-index: -1;
+        //     border: 1rem solid $color-yellow;
+            
+
+        // }
+
     }
 
     

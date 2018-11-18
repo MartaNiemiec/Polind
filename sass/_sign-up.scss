@@ -15,4 +15,12 @@
     &__paragraph {
         padding-top: 3rem;
     }
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 55%;
+    }
+ }
+
+ .sign-up h1 {
+     text-align: center;
  }

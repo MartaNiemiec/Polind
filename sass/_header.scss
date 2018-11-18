@@ -2,7 +2,7 @@
     background-image: linear-gradient(rgba(0,0,0,0.7),
     rgba(0,0,0,0.7)), url(../img/top-photo.jpg);
     background-size: cover;
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
     grid-column: full-start / full-end;
     
@@ -10,9 +10,20 @@
     text-align: center;
 
     display: grid;
-    grid-template-rows: min-content 1fr min-content min-content min-content 1fr;
+    grid-template-rows: min-content 1fr repeat(3, min-content) 1fr;
     align-items: end;
     position: relative;
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 2rem 2rem 18vh 2rem;
+        justify-content: center;
+    }
+    
+}
+
+
+.header .btn {
+        margin-top: 0;
 }
 
 .nav {
@@ -20,16 +31,18 @@
     grid-template-columns: auto auto;
     justify-content: space-between;
 
+    @media only screen and (max-width: $bp-medium) {
+        // grid-template-columns: auto auto;
+    }
+
 }
 
 .logo {
     display: flex;
     align-items: center;
 
-    
-
     &__img {
-        margin-right: 2rem;
+        margin-right: 2.5rem;
         flex: 1;
 
     }
@@ -37,7 +50,11 @@
     &__text {
         font-size: 3rem;
         
+        @media only screen and (max-width: $bp-small) {
+            font-size: 2rem;
+        }
     }
+
 }
 
 .menu {
@@ -97,6 +114,8 @@
     }
 
 }
+
+
 
 .search {
     

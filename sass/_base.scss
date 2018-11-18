@@ -19,8 +19,10 @@ $font-primary: 'Montserrat', sans-serif;
 // RESPONSIVE BREAKOPINTS
 $bp-largest: 75em;      // 1200px/16px = 75em
 $bp-large: 62.5em;      // 1000px
-// $bp-medium: 50em;       // 800px
-// $bp-small: 37.5em;       // 600px
+$bp-medium: 50em;       // 800px
+$bp-small: 37.5em;       // 600px
+$bp-xsmall: 25em;       // 400px
+
 
 *,
 *::before,
@@ -37,18 +39,40 @@ html {
     color: $color-white;
     font-weight: 400;
 
-    @media only screen and (max-width: $bp-largest) {
+    @media only screen and (max-width: $bp-large) {
         font-size: 55%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 50%;
+    }
+    @media only screen and (max-width: $bp-small) {
+        font-size: 45%;
     }
 }
 
 .container {
     display: grid;
 
-    grid-template-rows: 70vh 25vh min-content fit min-content minmax(min-content, 35rem);
+    // grid-template-rows: 70vh 25vh min-content fit min-content minmax(min-content, 35rem);
 
-    grid-template-rows: 70vh 25vh repeat(3, min-content) minmax(min-content, 35rem);
+    grid-template-rows: 75vh 25rem repeat(3, min-content) minmax(min-content, 35rem);
     grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(5rem, 1fr) [full-end];
+
+    @media only screen and (max-width: $bp-large) {
+        grid-template-rows: 85vh 25rem repeat(3, min-content) minmax(min-content, 35rem);
+    }
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-rows: 75vh 40rem repeat(3, min-content) minmax(min-content, 35rem);
+    }
+    
+    @media only screen and (max-width: $bp-small) {
+        grid-template-rows: 90vh min-content repeat(3, min-content) minmax(min-content, 35rem);
+    }
+    
+    @media only screen and (max-width: $bp-xsmall) {
+        grid-template-columns: [full-start] minmax(1rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(1rem, 1fr) [full-end];
+    }
 }
 
 ::selection {
