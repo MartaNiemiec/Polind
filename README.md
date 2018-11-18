@@ -12,4 +12,6 @@ Built using:
 * Sass
 * NPM
 
-live: https://htmlpreview.github.io/?https://github.com/MartaNiemiec/Polind/blob/master/index.html
+[LIVE PREVIEW](https://martaniemiec.github.io/Polind/)
+
+![Polind](Polind.jpg)
