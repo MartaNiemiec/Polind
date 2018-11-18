@@ -14,13 +14,29 @@
 
         &--text {
             text-transform: uppercase;
-            font-size: 27rem;
+            font-size: 24rem;
             font-weight: bolder;
 
             color: rgba($color-white,.7);
             text-shadow: 0  1rem 3rem rgba(83, 83, 83, 0.1);
             
             z-index: 0;
+
+            @media only screen and (max-width: $bp-large) {
+                font-size: 22rem;
+            }
+
+            @media only screen and (max-width: $bp-medium) {
+                font-size: 18rem;
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                font-size: 14rem;
+            }
+
+            @media only screen and (max-width: $bp-xsmall) {
+                font-size: 10rem;
+            }
         }
     }
 

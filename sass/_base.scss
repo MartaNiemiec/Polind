@@ -62,18 +62,23 @@ html {
     grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(5rem, 1fr) [full-end];
 
     @media only screen and (max-width: $bp-large) {
-        grid-template-rows: 85vh 25rem repeat(3, min-content) minmax(min-content, 35rem);
+        grid-template-rows: 85vh 25rem repeat(3, min-content) 27rem;
     }
+
     @media only screen and (max-width: $bp-medium) {
-        grid-template-rows: 75vh 40rem repeat(3, min-content) minmax(min-content, 35rem);
+        grid-template-rows: 75vh 40rem repeat(3, min-content) 23rem;
     }
     
     @media only screen and (max-width: $bp-small) {
-        grid-template-rows: 90vh min-content repeat(3, min-content) minmax(min-content, 35rem);
+        grid-template-rows: 90vh min-content repeat(3, min-content) 19rem;
     }
     
     @media only screen and (max-width: $bp-xsmall) {
         grid-template-columns: [full-start] minmax(1rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(1rem, 1fr) [full-end];
+    }
+
+    @media only screen and (max-width: $bp-xsmall) {
+        grid-template-rows: 90vh min-content repeat(3, min-content) 15rem;
     }
 }
 

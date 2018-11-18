@@ -65,7 +65,23 @@
         z-index: 1900;
         transform: translateY(0);
     }
+    
+    [aria-expanded="true"] > .menu__icon {
+       
+            background-color: transparent;
+    }
 
+    [aria-expanded="true"] > .menu__icon::before {
+        transform: rotate(-135deg);
+            top: 0;
+        // transform-origin: 50% 50%;
+    }
+    
+    [aria-expanded="true"] > .menu__icon::after {
+        transform: rotate(135deg);
+            top: 0;
+        // transform-origin: 50% 50%;
+    }
 }
 
 .menu {
@@ -76,7 +92,7 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        position: absolute;
+        position: fixed;
         right: 0;
         top: 0;
         width: 100vw;
@@ -110,7 +126,7 @@
     &__icon {
         position: absolute;
         top: 2.9rem;
-        right: 1.6rem;
+        right: 1.5rem;
         
         &,
         &::before,
@@ -152,7 +168,7 @@
         font-size: 1.8rem;
         padding: .2rem 2rem;
         position: relative;
-        
+
         transition: all .3s ease;
 
         @media only screen and (max-width: $bp-medium) {
@@ -202,7 +218,7 @@
 .search {
     
     &__form {
-        
+        margin-top: .4rem;
     }
 
     &__checkbox {
@@ -221,6 +237,10 @@
         opacity: 1;
         position: absolute;
         color: #222;
+
+        @media only screen and (max-width: $bp-medium) {
+            transform: translate(-10rem, 2rem);
+        }
     }
 
     &__checkbox:checked ~ &__input:focus {
@@ -228,6 +248,10 @@
         width: 22rem;
         transform: translate(-21rem, 2rem);
         margin-right: -5rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            transform: translate(-10rem, 2rem);
+        }
     }
 
     &__button {     //label
@@ -246,12 +270,17 @@
         width: 2rem;
         height: 2rem;
 
+        @media only screen and (max-width: $bp-medium) {
+            width: 3rem;
+            height: 3rem;
+        }
+
         // transform: translateY(5px);
 
         &:hover,
         &:active,
         &:focus {
-            transform: scale(1.5,1.5);
+            transform: scale(1.2,1.2);
         }
     }
 
